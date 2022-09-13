@@ -1,4 +1,4 @@
-# CS50 Online Library System
+# Online Library System
 
 ## Description
 This is my Final Project for CS50’s Introduction to Computer Science course.
