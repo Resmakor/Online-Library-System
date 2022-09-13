@@ -58,4 +58,5 @@ In "helpers.py" as its name suggests there are functions that help "app.py" work
 The last file is called "add_admin_to_db.py". It was used only once to add administrator to database with hash.
 
 **I assumed that there is only one admin with admin_id equal to 1.**
-https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie.PNG?raw=true
+
+[https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie.PNG?raw=true](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie.PNG?raw=true)
