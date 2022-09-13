@@ -1,0 +1,110 @@
+body {
+    background-image : url("/static/libr_back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center center;
+}
+
+h1 {
+  font-weight: bold;
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.cslogo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items :center;
+  max-width:100%;
+  height:auto;
+}
+
+#form_login {
+  text-align: center;
+  vertical-align: middle;
+  height: 55vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Centers anything vertically and horizontally*/
+.content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#navbar_icon {
+  height: 28px;
+  width: 28px;
+}
+
+/* Inspired with W3Schools navbar tutorial */
+/* Add a black background color to the top navigation */
+.topnav {
+  position: relative;
+  background-color: rgba(36, 36, 36, 0.6);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgba(169, 169, 169, 0.9);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgba(220, 20, 60, 0.8);
+  color: white;
+  font-weight: bold;
+}
+
+
+/* Centered section inside the top navigation */
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
