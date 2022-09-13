@@ -1,0 +1,49 @@
+{% extends "homepage.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block main %}
+<br><br>
+<!-- Default dropright button -->
+<div class="dropdown">
+  <button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Genres
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <li><form action="/search" method="post"> <button class="dropdown-item" name="chosen_genre" value="All" >All</button></li> </form>
+      {% for genre in genres %}
+      <li><form action="/search" method="post"> <button class="dropdown-item" name="chosen_genre" value="{{ genre["genre"] }}" >{{ genre["genre"] }}</button></li> </form>
+      {% endfor %}
+  </ul>
+</div>
+
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">Cover</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Genre</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for book in books%}
+            <tr>
+                {% set photo_adress = book["photo_adress"]  %}
+                <th scope="row"></th>
+                <td>{{ book["book_id"] }}</td>
+                <td> <img src="{{ photo_adress }}" alt="photo" style="height: 75px; width: 75px;"> </td>
+                <td>{{ book["title"] }}</td>
+                <td>{{ book["description"] }}</td>
+                <td>{{ book["genre"] }}</td>
+                <td> <form action="/reserve_book" method="post"> <button name="reserved_book" value="{{ book["book_id"] }}" type="submit" class="btn btn-primary btn-block" onclick="location.href= '/search';">Reserve</button>  </form> </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

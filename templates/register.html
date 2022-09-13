@@ -1,0 +1,20 @@
+{% extends "loginregister.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div class="text-center">
+  <form id="form_login" action="/register" method="post">
+    <p> <input type="email" id="email" name="email" class="form-control mx-auto w-auto form-control-lg" placeholder="Email"  autofocus> </p>
+    <p> <input type="tel" id="phone_number" name="phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" class="form-control mx-auto w-auto form-control-lg" placeholder="Phone ex. 123-456-789"  autofocus> </p>
+    <p> <input type="password" id="password" name="password" class="form-control mx-auto w-auto form-control-lg" placeholder="Password"  autofocus> </p>
+    <p> <input type="password" id="check_password" name="check_password" class="form-control mx-auto w-auto form-control-lg" placeholder="Confirm password" autofocus> </p>
+    <div class="mt-3">
+        <button class="btn btn-lg btn-primary btn-block">Submit</button> <button type="button" onclick="location.href= '/login';" class="btn btn-lg btn-primary btn-block">Go Back</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

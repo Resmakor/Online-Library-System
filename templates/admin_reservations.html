@@ -1,0 +1,50 @@
+{% extends "homepage_admin.html" %}
+
+{% block title %}
+    Admin Reservations
+{% endblock %}
+{% block main %}
+<br><br>
+<form action="/admin_search" method="post">
+  <input list="types" placeholder="Search by" name="search_type">
+  <datalist id="types" aria-label="Default select example">
+    <option value="Reservation"></option>
+    <option value="User"></option>
+    <option value="Book"></option>
+  </datalist>
+  <input style="width: 150px;" name="ID" placeholder="ID"> <button class="btn btn-primary btn-block">Search</button> <button type="button" onclick="location.href= '/admin_reservations';" class="btn btn-primary btn-block">Reset filter</button>
+</form>
+<br>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Reservation ID</th>
+        <th scope="col">Book ID</th>
+        <th scope="col">Deadline</th>
+        <th scope="col">User ID</th>
+        <th scope="col">User Email</th>
+        <th scope="col">User Phone</th>
+        <th scope="col">Book's returned</th>
+        <th scope="col">Warn user</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for reservation in reservations%}
+            <tr>
+                <th scope="row"></th>
+                <td>{{ reservation["reservation_id"] }}</td>
+                <td>{{ reservation["book_id"] }}</td>
+                <td>{{ reservation["deadline"] }}</td>
+                <td>{{ reservation["user_id"] }}</td>
+                <td>{{ reservation["email"] }}</td>
+                <td>{{ reservation["phone_number"] }}</td>
+                <td> <form action="/returned_to_collection" method="post"> <button name="reservation_id" value="{{ reservation["reservation_id"] }}" type="submit" class="btn btn-primary btn-block" >Returned to collection</button>  </form> </td>
+                <td> <form action="/send_reminder" method="post"> <button name="reservation_id" value="{{ reservation["reservation_id"] }}" type="submit" class="btn btn-danger btn-block" >Send reminder</button>  </form> </td>
+                <td></td>
+              </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

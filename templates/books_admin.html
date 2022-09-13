@@ -1,0 +1,48 @@
+{% extends "homepage_admin.html" %}
+
+{% block title %}
+    View books
+{% endblock %}
+
+{% block main %}
+<br><br>
+<form action="/admin_search_books" method="post">
+  <input list="types" placeholder="Search by" name="search_type_books">
+  <datalist id="types" aria-label="Default select example">
+    <option value="Book"></option>
+    <option value="Title"></option>
+    <option value="Genre"></option>
+  </datalist>
+  <input style="width: 200px;" name="ID" placeholder="ID/Part of the title"> <button class="btn btn-primary btn-block">Search</button> <button type="button" onclick="location.href= '/books_admin';" class="btn btn-primary btn-block">Reset filter</button>
+</form>
+<br>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">ID</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Title</th>
+        <th scope="col">Genre</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for book in books%}
+            <tr>
+                {% set photo_adress = book["photo_adress"]  %}
+                <th scope="row"></th>
+                <td>{{ book["book_id"] }}</td>
+                <td> <img src="{{ photo_adress }}" alt="photo" style="height: 75px; width: 75px;"> </td>
+                <td>{{ book["title"] }}</td>
+                <td>{{ book["genre"] }}</td>
+                {% if book["book_id"] in occupied_books_ids_only %}
+                <td style="color:#800000; font-weight: bold;">Occupied</td>
+                {% else %}
+                <td style="color:#008000; font-weight: bold;">Free</td>
+                {%endif%}
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

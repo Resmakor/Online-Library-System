@@ -1,0 +1,23 @@
+{% extends "homepage_admin.html" %}
+
+{% block title %}
+    Manage books
+{% endblock %}
+
+{% block main %}
+<div class="text-center">
+  <br>
+  <br>
+  <form id="form_login" action="/add_new_book_admin" method="post">
+    <p> <input id="title" name="title" class="form-control mx-auto w-auto form-control-lg" placeholder="Title" autofocus> </p>
+    <p> <textarea placeholder="Description" class="form-control mx-auto w-auto form-control-lg" name="description" cols="40" rows="5"></textarea> </p>
+    <p> <input id="genre" name="genre" class="form-control mx-auto w-auto form-control-lg" placeholder="Genre" autofocus> </p>
+    <p> <input id="photo_adress" name="photo_adress" class="form-control mx-auto w-auto form-control-lg" placeholder="Photo adress" autofocus> </p>
+    <p> <input id="ammount" name="ammount" class="form-control mx-auto w-auto form-control-lg" placeholder="Ammount" autofocus> </p>
+    <div class="mt-3">
+        <button class="btn btn-lg btn-primary btn-block">Add new book(s)</button> <button type="button" onclick="location.href= '/books_admin';" class="btn btn-lg btn-primary btn-block">View all books</button>
+      </div>
+    </div>
+  </form>
+</div>
+{% endblock %}

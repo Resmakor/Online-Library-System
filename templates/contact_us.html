@@ -1,0 +1,15 @@
+{% extends "homepage.html" %}
+
+{% block title %}
+    Contact us
+{% endblock %}
+
+{% block main %}
+<br><br>
+<form action="/contact_us" method="post" id="form_login">
+    <p> <h1 type="button" class="btn btn-lg btn-success"> Leave a message below! We will contact you by email or phone :) </h1> </p>
+    <p> <textarea class="form-control mx-auto w-auto form-control-lg" style="font-family:Arial; font-size:20px;" name="message" rows="10" cols="80" maxlength="1000"></textarea> </p>
+    <br>
+    <button type="submit" class="btn btn-lg btn-primary btn-block">Send message</button>
+</form>
+{% endblock %}
