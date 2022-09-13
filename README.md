@@ -60,14 +60,20 @@ The last file is called "add_admin_to_db.py". It was used only once to add admin
 **I assumed that there is only one admin with admin_id equal to 1.**
 
 ## Snippets (more in "snippets" folder)
+
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie.PNG?raw=true)
+##
 
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie3.PNG?raw=true)
+##
 
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie4.PNG?raw=true)
+##
 
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie5.PNG?raw=true)
+##
 
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie6.PNG?raw=true)
+##
 
 ![alt text](https://github.com/Resmakor/Online-Library-System/blob/main/snippets/Przechwytywanie8.PNG?raw=true)
