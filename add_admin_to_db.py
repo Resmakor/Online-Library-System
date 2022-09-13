@@ -5,7 +5,7 @@ from cs50 import SQL
 db = SQL("sqlite:///library.db")
 
 def save_hash():
-    #hash = generate_password_hash(paste password)
-    db.execute("INSERT INTO admins (email, hash) VALUES(?, ?)", "dafas123@poczta.onet.pl", hash)
+    #hash = generate_password_hash(paste admin's password)
+    db.execute("INSERT INTO admins (email, hash) VALUES(?, ?)", "paste admin's email", hash)
 
 #save_hash()
