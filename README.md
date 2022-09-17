@@ -2,7 +2,7 @@
 
 ## Description
 This is my Final Project for CS50’s Introduction to Computer Science course.
-My project is a web application made with Python (Flask, Jinja), HTML, CSS and SQL for managing library.
+My project is a web application made with Python (Flask, Jinja), HTML, CSS and SQLite for managing library.
 
 ## Folder "templates"
 Folder called "templates" includes HTML files. There are templates for homepage, homepage with navigate bar, login, register, contact admin, search for a book, reserve book, display user's reservations, admin's homepage, add new book to system, view archives, view books, view reservations or render apology if something goes wrong. The name of each template suggests what it renders on the page.
